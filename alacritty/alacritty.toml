@@ -1,0 +1,11 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+# brew install font-meslo-lg-nerd-font
+normal.family = "MesloLGS Nerd Font Mono"
+size = 12
+
+[window]
+dimensions.columns = 180
+dimensions.lines = 50
