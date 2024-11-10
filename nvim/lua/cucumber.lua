@@ -92,17 +92,22 @@ M.debug_current_scenario = function()
     vim.api.nvim_err_writeln("Failed to find scenario to run")
 end
 
---[[
--- TODO: Find a nice solution for running 'bundle exec cucumber relativeFile:line`
--- and have the output piped async in to a floating or split terminal pane
---]]
-
--- M.run_current_secnario = function()
---     local scenario = get_current_scenario()
---     if scenario ~= nil then
---         vim.api.nvim_cmd
---     end
--- end
+M.run_current_secnario = function()
+    local scenario = get_current_scenario()
+    if scenario ~= nil then
+        vim.api.nvim_cmd(
+            {
+                cmd = "!",
+                args = {
+                    "bundle",
+                    "exec",
+                    "cucumber",
+                    scenario.relative_file .. ":" .. scenario.line
+                }
+            },
+            {})
+    end
+end
 
 -- Creating a command in this way allows us to set the keybinding in an ftplugin file which
 -- can map a keybinding to `:CucumberDebugCurrentScenario`, instead of inoking directly
@@ -110,6 +115,7 @@ end
 -- This is just a nicety to make the output of the whichkey nvim plugin be a little more 
 -- friendly to read.
 vim.api.nvim_create_user_command('CucumberDebugCurrentScenario', M.debug_current_scenario, {})
+vim.api.nvim_create_user_command('CucumberRunCurrentScenario', M.run_current_secnario, {})
 
 return M
 
