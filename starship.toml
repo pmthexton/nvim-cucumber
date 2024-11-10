@@ -17,7 +17,7 @@ $rust \
 $scala \
 $python \
 $time\n  \
-[󱞪](fg:iris)
+[󱞪 ](fg:iris)
 """
 
 palette = "rose-pine"
@@ -68,7 +68,7 @@ diverged = '⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foa
 behind = '[⇣\(${count}\)](bg:overlay fg:rose)'
 
 [time]
-disabled = false
+disabled = true
 format = "[](fg:overlay)[ $time 󰴈 ]($style)[](fg:overlay)"
 style = "bg:overlay fg:rose"
 time_format = "%I:%M%P"
