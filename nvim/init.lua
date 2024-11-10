@@ -45,6 +45,9 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- color scheme
+  { "rose-pine/neovim", name = "rose-pine", opts = {} },
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -171,9 +174,9 @@ require('lazy').setup({
 
       local dap, dapui = require("dap"), require("dapui")
 
-      -- dap.listeners.after.attach.dapui_config = function()
-      --   dapui.open()
-      -- end
+      dap.listeners.after.attach.dapui_config = function()
+        dapui.open()
+      end
 
       add_keymap_document('n', '<leader>dc', function() require('dap').continue() end, "Continue")
       add_keymap_document('n', '<leader>dj', function() require('dap').step_over() end, "Step over")
@@ -619,3 +622,5 @@ cmp.setup {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 vim.lsp.set_log_level 'debug'
+
+vim.cmd("colorscheme rose-pine")
