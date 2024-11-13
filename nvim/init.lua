@@ -72,6 +72,12 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- We're going to use treesitter for cold folding, but we don't
+-- want all possible folds to be auotmatically done (foldlevelstart)
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.o.foldlevelstart = 99
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
