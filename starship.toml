@@ -1,26 +1,21 @@
 format = """
+$hostname \
 $username \
 $directory \
 $git_branch \
 $git_status \
 $fill \
-$c \
-$elixir \
-$elm \
-$golang \
-$haskell \
-$java \
-$julia \
-$nodejs \
-$nim \
-$rust \
-$scala \
-$python \
 $time\n  \
 [󱞪 ](fg:iris)
 """
 
 palette = "rose-pine"
+
+[hostname]
+ssh_only = false
+disabled = false
+format = "[](fg:overlay)[ 󰧱 $hostname ]($style)[](fg:overlay)"
+style = "bg:overlay fg:iris"
 
 [palettes.rose-pine]
 overlay = '#26233a'
@@ -81,76 +76,4 @@ show_always = true
 style_root = "bg:overlay fg:iris"
 style_user = "bg:overlay fg:iris"
 
-# Languages
 
-[c]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[elixir]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[elm]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[golang]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[haskell]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[java]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[julia]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[nodejs]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = "󰎙 "
-
-[nim]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = "󰆥 "
-
-[rust]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = ""
-
-[scala]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = " "
-
-[python]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-disabled = false
-symbol = ' '
