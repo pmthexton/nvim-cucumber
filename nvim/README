@@ -1,3 +1,8 @@
+-- Config originally based on nvim-lua kickstar repo
+-- https://github.com/nvim-lua/kickstart.nvim
+-- has since had a few things added, and split out in to separate
+-- files instead of one big init.lua to keep things a little more
+-- maintainable.
 
 --[[
 
