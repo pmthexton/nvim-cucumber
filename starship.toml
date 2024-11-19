@@ -32,12 +32,6 @@ style = "bg:overlay fg:pine"
 truncation_length = 3
 truncation_symbol = "…/"
 
-[directory.substitutions]
-Documents = "󰈙"
-Downloads = " "
-Music = " "
-Pictures = " "
-
 [fill]
 style = "fg:overlay"
 symbol = " "
