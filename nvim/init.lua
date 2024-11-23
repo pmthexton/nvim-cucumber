@@ -161,6 +161,12 @@ nvim_lsp.cucumber_language_server.setup {
   }
 }
 
+nvim_lsp.sourcekit.setup({
+  root_dir = nvim_lsp.util.root_pattern("Package.swift", "*.xcodeproj"),
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
